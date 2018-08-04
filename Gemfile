@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'omniauth-facebook'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'carrierwave'
 gem "rails_db", "1.6"
