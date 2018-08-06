@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri', '~> 1.8', '>= 1.8.4'
 gem 'omniauth-facebook'
+gem 'omniauth-naver'
+gem "omniauth-google-oauth2"
+gem 'omniauth-instagram'
+gem 'omniauth-kakao', :git => 'git://github.com/hcn1519/omniauth-kakao'
+gem 'omniauth-line'
+
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'carrierwave'
 gem "rails_db", "1.6"
