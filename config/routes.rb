@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :profiles
   get '/posts/explore' => 'posts#explore'
   get '/posts/intro'  => 'posts#intro'
+  
   resources :posts
-  devise_for :users
+  devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks' }
+
 end
