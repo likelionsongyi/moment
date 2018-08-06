@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   get '/posts/intro'  => 'posts#intro'
   
   resources :posts
+<<<<<<< HEAD
   devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks' }
 
+=======
+  
+  # omniauth : for SNS(facebook) login
+  devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks' }
+  
+>>>>>>> f7de8da45bfb555f1bb5cb856c853cccbc2d0c3a
 end

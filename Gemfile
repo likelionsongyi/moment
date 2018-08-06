@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'nokogiri', '~> 1.8', '>= 1.8.4'
 gem 'omniauth-facebook'
 gem 'omniauth-naver'
@@ -7,6 +8,13 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-instagram'
 gem 'omniauth-kakao', :git => 'git://github.com/hcn1519/omniauth-kakao'
 gem 'omniauth-line'
+# for SNS  Login
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-naver'
+
+gem 'figaro'
+
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'carrierwave'
