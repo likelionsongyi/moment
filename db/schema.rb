@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180804192125) do
-=======
 ActiveRecord::Schema.define(version: 20180806110314) do
->>>>>>> f7de8da45bfb555f1bb5cb856c853cccbc2d0c3a
 
   create_table "boards", force: :cascade do |t|
     t.text     "description"

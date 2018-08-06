@@ -234,7 +234,6 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
   nokogiri (~> 1.8, >= 1.8.4)
   omniauth-facebook
   omniauth-google-oauth2
