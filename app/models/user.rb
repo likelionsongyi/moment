@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
+<<<<<<< HEAD
+=======
+
+  has_many :boards
+>>>>>>> 51db03c3921862e812891d8fab4af474ea57ffc9
   
   # for SNS login       
   def self.find_for_oauth(auth, signed_in_resource = nil)

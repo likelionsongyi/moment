@@ -11,14 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180806110314) do
+
+ActiveRecord::Schema.define(version: 20180807201433) do
+
 
   create_table "boards", force: :cascade do |t|
     t.text     "description"
     t.string   "picture"
     t.integer  "hit"
+    t.string   "user"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "category_id"
+  end
+
+  add_index "boards", ["category_id"], name: "index_boards_on_category_id"
+  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hashtags_posts", id: false, force: :cascade do |t|
+    t.integer "post_id",    null: false
+    t.integer "hashtag_id", null: false
   end
 
   create_table "identities", force: :cascade do |t|
@@ -31,9 +56,11 @@ ActiveRecord::Schema.define(version: 20180806110314) do
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"
 
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
+    t.string   "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +69,7 @@ ActiveRecord::Schema.define(version: 20180806110314) do
     t.text     "description"
     t.string   "picture"
     t.integer  "hit"
+    t.string   "user"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
